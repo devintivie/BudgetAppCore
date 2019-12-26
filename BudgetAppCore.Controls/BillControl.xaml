@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="BudgetAppCore.Controls.BillControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BudgetAppCore.Controls"
+             xmlns:vms="clr-namespace:BudgetAppCore.ViewModels;assembly=BudgetAppCore.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Border BorderBrush="Black" BorderThickness="2" Background="Gray">
+        <StackPanel Orientation="Horizontal">
+            <CheckBox VerticalAlignment="Center" Padding="5"
+                      HorizontalAlignment="Center"
+                      IsChecked="{Binding IsPaid}"
+                      />
+            <TextBox Text="{Binding AmountDue}"
+                     Grid.Column="0" Width="100"
+                     BorderThickness="2 0"
+                     BorderBrush="Black"
+                     Background="Transparent"
+                     VerticalContentAlignment="Center"
+                     HorizontalContentAlignment="Center"
+                     >
+            </TextBox>
+            
+            
+
+            <Button Content="{Binding DueDate}" 
+                    Command="{Binding TestCommand}"
+                    Grid.Column="1" 
+                    Padding="5"
+                        Width="180" 
+                        VerticalAlignment="Center"
+                   
+                   />
+            <!--<Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeEditIcon}" 
+                    Command="{Binding OpenPopupCommand}"
+                    />-->
+
+            <!--<Popup IsOpen="{Binding IsCalendarOpen, Delay=200}" StaysOpen="False"
+                   HorizontalOffset="70" VerticalOffset="-30">
+                <StackPanel Orientation="Vertical">
+                    <Calendar SelectedDate="{Binding DueDate}" DisplayDate="{Binding DueDate, Mode=OneWay}"/>
+                    <ComboBox ItemsSource="{Binding AccountOptions}" SelectedItem="{Binding SelectedAccount}"/>
+                </StackPanel>
+
+            </Popup>-->
+        </StackPanel>
+    </Border>
+</UserControl>

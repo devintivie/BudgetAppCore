@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BaseClassesCore\BaseClassesCore.csproj" />
+    <ProjectReference Include="..\BudgetAppCore.Models\BudgetAppCore.Models.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:BudgetAppCore.App"
+                    xmlns:vms="clr-namespace:BudgetAppCore.ViewModels;assembly=BudgetAppCore.ViewModels"
+                    xmlns:controls="clr-namespace:BudgetAppCore.Controls;assembly=BudgetAppCore.Controls">
+    <DataTemplate DataType="{x:Type vms:BillViewModel}">
+        <controls:BillControl/>
+    </DataTemplate>
+</ResourceDictionary>
